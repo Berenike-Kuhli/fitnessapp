@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
+/*three directives, main parts of tailwind*/
+@tailwind base; /* inserts Preflight, a set of base styles*/
+@tailwind components; /* inserts stuff like*/
 @tailwind utilities;
+
 
 body {
   margin: 0;
