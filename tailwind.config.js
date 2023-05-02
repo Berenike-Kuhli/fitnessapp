@@ -8,6 +8,12 @@ module.exports = {
         'medium': '#3A4151',
         'dark': '#202430'
       },
+      borderRadius: {
+        'rounded-cus': '1.875rem'
+      },
+      width: {
+        'w-cus': '25rem',
+      }
     },
   },
   plugins: [],
