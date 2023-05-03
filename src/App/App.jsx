@@ -1,12 +1,14 @@
 import "./App.css";
 import "./NavBar.jsx";
 
+const user = {
+  name: "Maxine Musterfrau",
+};
+
 function App() {
-  const user = {
-    name: "Maxine Musterfrau",
-  };
+
   return (
-    <div className="App h-content w-[28rem] bg-dark">
+    <div className="App h-content w-100 bg-dark">
       <div>
         <h1 className="pb-6 pl-4 pt-10 text-left text-4xl font-bold text-light">
           Hi {user.name}!
@@ -35,7 +37,7 @@ function App() {
           </label>
         </div>
       </div>
-      <NavBar/>
+      {/* <NavBar /> */}
     </div>
   );
 }

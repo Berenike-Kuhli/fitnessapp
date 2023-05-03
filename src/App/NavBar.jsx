@@ -1,6 +1,6 @@
 import "./App.css";
 
-const NavBar = () => {
+function NavBar() {
   return (
     <nav>
       <ul className="h-13 flex list-none justify-between rounded-t-3xl bg-black px-12 py-3.5">
