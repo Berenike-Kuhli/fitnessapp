@@ -1,5 +1,4 @@
-// import "./app.css";
-import NavBar from "../components/NavBar.jsx"; //explizit die Komponente importieren, nicht die ganze Datei; NavBar Variable wird heir deklariert
+import DefaultLayout from "../layouts/DefaultLayout.jsx"; //explizit die Komponente importieren, nicht die ganze Datei; NavBar Variable wird heir deklariert
 
 const user = {
   name: "Maxine Musterfrau",
@@ -7,7 +6,7 @@ const user = {
 
 function Home() {
   return (
-    <div className="App h-content w-100 bg-dark">
+    < DefaultLayout >
       <div>
         <h1 className="pb-6 pl-4 pt-10 text-left text-4xl font-bold text-light">
           Hi {user.name}!
@@ -36,8 +35,7 @@ function Home() {
           </label>
         </div>
       </div>
-      <NavBar />
-    </div> //Klammerdiv
+    </DefaultLayout>
   );
 }
 
