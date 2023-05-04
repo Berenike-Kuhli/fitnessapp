@@ -1,12 +1,11 @@
-import "./App.css";
-import "./NavBar.jsx";
+// import "./app.css";
+import NavBar from "../components/NavBar.jsx"; //explizit die Komponente importieren, nicht die ganze Datei; NavBar Variable wird heir deklariert
 
 const user = {
   name: "Maxine Musterfrau",
 };
 
-function App() {
-
+function Home() {
   return (
     <div className="App h-content w-100 bg-dark">
       <div>
@@ -37,9 +36,9 @@ function App() {
           </label>
         </div>
       </div>
-      {/* <NavBar /> */}
-    </div>
+      <NavBar />
+    </div> //Klammerdiv
   );
 }
 
-export default App;
+export default Home;

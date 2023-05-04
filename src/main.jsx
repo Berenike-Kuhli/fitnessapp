@@ -1,24 +1,30 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot} from "react-dom/client";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import "./index.css";
-import App from "./App/App";
-import ErrorPage from "./error-page";
+import Home from "./pages/Home";
+import ErrorPage from "./pages/error-page";
 // import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+
+const root = createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter ([
 {
 path: "/",
-element: <App />,
-errorElement: <ErrorPage />,
+element: <Home />,
 },
+
+
+//Error als Catchall am Ende
+{
+  path: "/",
+  errorElement: <ErrorPage />,
+}
 ]);
 
-// TODO router und App-Aufruf sind jetzt doppelt, welches muss raus...?
-ReactDOM.render(
+
+root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

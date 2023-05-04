@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 
 function NavBar() {
   return (
@@ -17,3 +17,6 @@ function NavBar() {
     </nav>
   );
 }
+
+// jede Komponente braucht Export! sonst wirds schwierig^^
+export default NavBar
