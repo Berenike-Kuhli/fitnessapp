@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar";
+import NavBar from "../components/navBar/NavBar";
 
 function DefaultLayout({ children, className }) {
     return (
