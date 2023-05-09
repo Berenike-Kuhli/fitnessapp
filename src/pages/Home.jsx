@@ -1,4 +1,5 @@
 import DefaultLayout from "../layouts/DefaultLayout.jsx"; //explizit die Komponente importieren, nicht die ganze Datei; NavBar Variable wird heir deklariert
+import ButtonLarge from "../components/ButtonLarge.jsx";
 
 const user = {
   name: "Maxine Musterfrau",
@@ -15,6 +16,10 @@ function Home() {
       <div className="flex justify-center">
         <img src="../startbild.png"></img>
       </div>
+
+      {/* TODO if-else-Schleife bauen */}
+      {/* if Programm ausgewählt, heutiges Workout mit Dauer und Art,  */}
+      <div> 
       <div className="flex items-baseline justify-between pt-10">
         <h3 className="pl-4 text-2xl font-bold text-light">
           Dein Workout heute
@@ -34,6 +39,15 @@ function Home() {
             Beweglichkeit
           </label>
         </div>
+      </div>
+      </div>
+      {/* else Hinweis, Programm auszuwählen mit Link auf Browse Ansicht */}
+      <div>
+        <h3 className="text-2xl font-bold text-light">Bitte wähle ein Programm aus</h3>
+        {/* TODO checken, ob der Button funktioniert */}
+        <ButtonLarge>
+          <p>Programm auswählen</p>
+        </ButtonLarge>
       </div>
     </DefaultLayout>
   );
