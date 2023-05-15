@@ -1,13 +1,15 @@
-import ButtonLarge from "./button-large"
+import ButtonPrimary from "./buttons/button-primary"
+
+// TODO zentrieren
 
 function ChooseProgram () {
 return (
-<div>
-        <h3 className="text-2xl font-bold text-light">Bitte wähle ein Programm aus</h3>
+<div className="">
+        <h3 className="mt-10 text-2xl font-bold text-light mb-10">Bitte wähle ein Programm aus</h3>
         {/* TODO Button mit BrowseProgram verbinden */}
-        <ButtonLarge>
-        <p>Programm auswählen</p>
-        </ButtonLarge>
+        <ButtonPrimary>
+        <p>Alle Programme</p>
+        </ButtonPrimary>
       </div>);
 }
 

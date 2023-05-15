@@ -2,7 +2,7 @@
 
 function NavBar() {
   return (
-    <nav>
+    <nav className="fixed bottom-0 w-full">
       <ul className="h-13 flex list-none justify-between rounded-t-3xl bg-black px-12 py-3.5">
         <li>
           <img src="./icon-house.svg"></img>
