@@ -2,14 +2,14 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-// import {
-//   ApolloClient,
-//   InMemoryCache,
-//   ApolloProvider,
-//   gql,
-// } from "@apollo/client";
 import Home from "./pages/home";
-import ErrorPage from "./pages/ErrorPage";
+import ErrorPage from "./pages/error-page";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  gql,
+} from "@apollo/client";
 
 const root = createRoot(document.getElementById("root"));
 
