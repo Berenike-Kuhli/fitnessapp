@@ -18,7 +18,7 @@ module.exports = {
 
       },
       borderRadius: {
-        'rounded-cus': '1.875rem'
+        'rounded-cus': '[1.875rem]'
       },
       width: {
         'w-cus': '25rem',

@@ -5,7 +5,7 @@ import ButtonGrad1, { ButtonGrad2, ButtonGrad3 } from "../components/buttons/but
 
 const user = {
   name: "Maxine Musterfrau",
-  hasChosen: false,
+  hasChosen: true,
 };
 
 function Home() {
