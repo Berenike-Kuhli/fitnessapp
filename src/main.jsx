@@ -8,7 +8,7 @@ import "./index.css";
 //   ApolloProvider,
 //   gql,
 // } from "@apollo/client";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import ErrorPage from "./pages/ErrorPage";
 
 const root = createRoot(document.getElementById("root"));
