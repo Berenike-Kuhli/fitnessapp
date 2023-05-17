@@ -1,6 +1,6 @@
 import DefaultLayout from "../layouts/DefaultLayout"; // explizit die Komponente importieren, nicht die ganze Datei; NavBar Variable wird heir deklariert
-import ChooseProgram from "../components/choose-programm";
-import ShowOverview from "../components/overview-workout";
+import ChooseProgram from "../components/ChooseProgram";
+import ShowOverview from "../components/ShowOverview";
 
 const user = {
   name: "Maxine Musterfrau",
