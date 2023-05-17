@@ -1,7 +1,5 @@
 import Button from "./buttons/ButtonPrimary";
 
-// TODO zentrieren
-
 function ChooseProgram() {
   return (
     <div className="flex flex-col items-center">

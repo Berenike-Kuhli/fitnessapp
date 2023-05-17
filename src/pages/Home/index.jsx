@@ -1,14 +1,8 @@
-<<<<<<<< HEAD:src/pages/home.jsx
-import DefaultLayout from "../layouts/DefaultLayout"; // explizit die Komponente importieren, nicht die ganze Datei; NavBar Variable wird heir deklariert
-import ChooseProgram from "../components/choose-programm";
-import ShowOverview from "../components/overview-workout";
-========
 import DefaultLayout from "../../layouts/DefaultLayout"; // explizit die Komponente importieren, nicht die ganze Datei
 import ChooseProgram from "../../components/ChooseProgram";
 import ShowOverview from "../../components/ShowOverview";
 import Startbild from "./startbild.png";
-import NavBar from "../../components/navbar";
->>>>>>>> b301198 (update einbindung icons und bilder):src/pages/home/index.jsx
+import NavBar from "../../components/navbar/index";
 
 const user = {
   name: "Maxine Musterfrau",
