@@ -1,12 +1,12 @@
-import NavBar from "../components/navBar/NavBar";
+import NavBar from "../components/NavBar";
 
 function DefaultLayout({ children, className }) {
-    return (
-        <div className="bg-dark flex flex-col min-h-screen w-100 ${className}">
-            { children }
-            <NavBar/>
-        </div>
-    );
+  return (
+    <div className={`w-100 ${className} flex min-h-screen flex-col bg-dark`}>
+      {children}
+      <NavBar />
+    </div>
+  );
 }
 
 export default DefaultLayout;

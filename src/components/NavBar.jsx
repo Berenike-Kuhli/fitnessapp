@@ -1,5 +1,3 @@
-
-
 function NavBar() {
   return (
     <nav className="fixed bottom-0 w-full">
@@ -19,4 +17,4 @@ function NavBar() {
 }
 
 // jede Komponente braucht Export! sonst wirds schwierig^^
-export default NavBar
+export default NavBar;
