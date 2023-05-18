@@ -1,5 +1,5 @@
 import DefaultLayout from "../layouts/DefaultLayout";
-// import ProgramMedium from "../components/ProgramRectangles";
+import ProgramMedium from "../components/ProgramRectangles";
 
 export default function AllPrograms() {
   return (
@@ -7,9 +7,10 @@ export default function AllPrograms() {
       <h2 className="py-14 pl-4 text-left text-3xl font-bold text-light">
         Browse
       </h2>
-      {/* <ProgramMedium className="bg-grad1" />
-      <ProgramMedium className="bg-grad2" />
-      <ProgramMedium className="bg-grad3" /> */}
+      {/* TODO make gradients alternate */}
+      <ProgramMedium><p>Test</p></ProgramMedium>
+      <ProgramMedium/>
+      <ProgramMedium/>
     </DefaultLayout>
   );
 }
