@@ -10,6 +10,7 @@ import {
   ApolloProvider,
   gql,
 } from "@apollo/client";
+import AllPrograms from "./pages/AllPrograms";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+
+  {
+    path: "/programs",
+    element: <AllPrograms />,
   },
 
   // Error als Catch all am Ende

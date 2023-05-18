@@ -1,4 +1,4 @@
-import Button from "./buttons/ButtonPrimary";
+import ButtonPrimary from "./buttons/ButtonPrimary";
 
 function ChooseProgram() {
   return (
@@ -7,7 +7,7 @@ function ChooseProgram() {
         Bitte wähle ein Programm aus
       </h3>
       {/* TODO Button mit BrowseProgram verbinden */}
-      <Button bg="grad2">Alle Programme</Button>
+      <ButtonPrimary bg="grad2"><a href="/programs">Alle Programme</a></ButtonPrimary>
     </div>
   );
 }

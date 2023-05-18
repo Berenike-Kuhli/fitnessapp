@@ -4,7 +4,7 @@ export default function ButtonPrimary({ children, className, bg = "grad1" }) {
   const bgStyles = {
     grad1: "from-g1a to-g1b",
     grad2: " from-g2a to-g2b",
-    grad3: "from-g3d from-0% via-g3c via-[21.35%] to-g3b to-[92.71%]",
+    grad3: "from-g3d from-[21.35%] via-g3c via-[74.35%] to-g3b to-[92.71%]",
   };
 
   return (
