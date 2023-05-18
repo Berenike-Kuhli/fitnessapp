@@ -1,5 +1,24 @@
 import DefaultLayout from "../layouts/DefaultLayout";
 import ProgramMedium from "../components/ProgramRectangles";
+import { gql, useQuery } from "@apollo/client";
+
+// TODO get this working
+const GET_PROGRAMS = gql`
+  query GetPrograms {
+    programs {
+      name
+    }
+  }`;
+
+  function Programs({ GetPrograms }) {
+    const { loading, error, data } = useQuery(query);
+  
+    if (loading) return null;
+    if (error) return `Error! ${error}`;
+  
+    return <pre>{JSON.stringify(data, null, 2)}</pre>;
+  }
+
 
 export default function AllPrograms() {
   return (
@@ -8,9 +27,12 @@ export default function AllPrograms() {
         Browse
       </h2>
       {/* TODO make gradients alternate */}
-      <ProgramMedium><p>Test</p></ProgramMedium>
-      <ProgramMedium/>
-      <ProgramMedium/>
+      <ProgramMedium>
+        {/* TODO add data from GraphQL */}
+        <p>Test</p>
+      </ProgramMedium>
+      <ProgramMedium />
+      <ProgramMedium />
     </DefaultLayout>
   );
 }
