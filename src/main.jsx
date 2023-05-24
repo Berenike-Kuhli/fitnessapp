@@ -11,6 +11,7 @@ import {
   gql,
 } from "@apollo/client";
 import AllPrograms from "./pages/AllPrograms";
+import Sandbox from "./pages/Sandbox";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
   {
     path: "/programs",
     element: <AllPrograms />,
+  },
+
+  {
+    path: "/sandbox",
+    element: <Sandbox />
   },
 
   // Error als Catch all am Ende
@@ -41,8 +47,8 @@ const client = new ApolloClient({
 
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
+    {/* <ApolloProvider client={client}> */}
       <RouterProvider router={router} />
-    </ApolloProvider>
+    {/* </ApolloProvider> */}
   </React.StrictMode>
 );
