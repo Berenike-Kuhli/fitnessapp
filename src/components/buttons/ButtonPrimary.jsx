@@ -1,5 +1,8 @@
 // Buttons mit den drei Gradients
 
+// TODO wie auf die gradients zugreifen?
+// TODO wie den Button mit anderen Farben aufrufen?
+
 export default function ButtonPrimary({ children, className, bg = "grad1" }) {
   const bgStyles = {
     grad1: "from-g1a to-g1b",

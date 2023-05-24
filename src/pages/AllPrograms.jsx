@@ -2,6 +2,8 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import ProgramMedium from "../components/ProgramRectangles";
 import { gql, useQuery } from "@apollo/client";
 
+// TODO Es werden nicht alle Programme direkt geladen. Entweder baut ihr ein endless scrolling wo ab einer bestimmten Scrollposition neue Programme geladen werden oder einen "weitere laden" Button unter den jeweils schon angezeigten Programmen
+
 // TODO get this working
 const GET_PROGRAMS = gql`
   query GetPrograms {
