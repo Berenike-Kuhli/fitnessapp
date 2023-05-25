@@ -1,14 +1,12 @@
-export default function Workout () {
-    return (
-    <div className="w-96 h-24 bg-medium rounded-[20px] m-3.5">
-       
-<div className="w-24 h-24 bg-light rounded-l-[20px]"></div>
-<div>
-<h1 className="text-lg text-light font-bold">Tag 1</h1>
-<p className="text-light text-xs">26 Min. &middot;</p>
-<p className="text-light text-xs">Beweglichkeit</p>
-</div>
+export default function Workout() {
+  return (
+    <div className="m-3.5 flex h-24 w-96 rounded-[20px] bg-medium">
+      <div className="h-24 w-24 rounded-l-[20px] bg-light"></div>
+      <div className="p-3.5">
+        <h1 className="mb-3.5 text-lg font-bold text-light">Tag 1</h1>
+        <p className="text-xs text-light">26 Min. &middot;</p>
+        <p className="text-xs text-light">Beweglichkeit</p>
+      </div>
     </div>
-
-    );
+  );
 }
