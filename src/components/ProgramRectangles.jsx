@@ -1,6 +1,4 @@
-// import { ButtonPrimary } from "./buttons/ButtonPrimary";
-
-
+import ButtonPrimary from "./buttons/ButtonPrimary";
 
 export function ProgramLarge() {
     const bgStyles = {
@@ -11,7 +9,7 @@ export function ProgramLarge() {
    return (
 <div>
     <p>Vorschau</p>
-<ButtonPrimary><p>Programm auswählen</p></ButtonPrimary>
+<ButtonPrimary bg="grad1"><p>Programm auswählen</p></ButtonPrimary>
 </div>
  );   
 }
