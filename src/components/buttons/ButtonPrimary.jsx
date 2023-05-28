@@ -1,9 +1,6 @@
-// Buttons mit den drei Gradients
+// Buttons mit den drei Gradients und Solids
 
-// TODO wie auf die gradients zugreifen?
-// TODO wie den Button mit anderen Farben aufrufen?
-
-export default function ButtonPrimary({ children, className, bg = "grad1" }) {
+export default function ButtonGradient({ children, className, bg = "grad1" }) {
   const bgStyles = {
     grad1: "from-g1a to-g1b",
     grad2: " from-g2a to-g2b",
@@ -12,7 +9,22 @@ export default function ButtonPrimary({ children, className, bg = "grad1" }) {
 
   return (
     <button
-      className={`${className} h-11 w-56 rounded-3xl bg-gradient-to-br ${bgStyles[bg]}`}
+      className={`${className} m-3.5 h-11 w-56 rounded-3xl bg-gradient-to-br ${bgStyles[bg]}`}
+    >
+      {children}
+    </button>
+  );
+}
+
+export function ButtonSolid({ children, className, bg = "light" }) {
+  const bgStyles = {
+   light: "light",
+    medium: "medium",
+  };
+
+  return (
+    <button
+      className={`${className} m-3.5 h-11 w-56 rounded-3xl bg-${bgStyles[bg]}`}
     >
       {children}
     </button>
