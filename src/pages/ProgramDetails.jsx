@@ -1,3 +1,4 @@
+import Workout from "../components/Workout";
 import DefaultLayout from "../layouts/DefaultLayout";
 import { gql, useQuery } from "@apollo/client";
 
@@ -49,7 +50,7 @@ export default function ProgramDetails() {
           <li>Beweglichkeit</li></ul>
         </section>
         <section>
-          <
+          <Workout className="grad1" />
         </section>
 </DefaultLayout>
     );

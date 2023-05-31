@@ -44,7 +44,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-// initialize apollo client, TODO checken, ob das so richtig ist
+// initialize apollo client
 const client = new ApolloClient({
   uri: "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clge62kcq0ive01uifv0t3meo/master",
   cache: new InMemoryCache(),
@@ -52,8 +52,8 @@ const client = new ApolloClient({
 
 root.render(
   <React.StrictMode>
-    {/* <ApolloProvider client={client}> */}
+    <ApolloProvider client={client}>
       <RouterProvider router={router} />
-    {/* </ApolloProvider> */}
+    </ApolloProvider>
   </React.StrictMode>
 );
