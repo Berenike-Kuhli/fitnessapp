@@ -10,8 +10,7 @@ export default function ButtonGradient({ children, className, bg = "grad1" }) {
   return (
     <button
       className={`${className} m-3.5 h-11 w-56 rounded-3xl bg-gradient-to-br ${bgStyles[bg]}`}
-    >
-      {children}
+    >{children}
     </button>
   );
 }
