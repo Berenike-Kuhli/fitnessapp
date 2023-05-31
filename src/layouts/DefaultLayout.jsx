@@ -3,7 +3,7 @@
 
 function DefaultLayout({ children, className }) {
   return (
-    <div className={`w-100 ${className} flex min-h-screen flex-col bg-dark`}>
+    <div className={`w-100 ${className} flex min-h-screen flex-col bg-dark text-light`}>
       {children}
     </div>
   );

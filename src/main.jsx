@@ -5,6 +5,7 @@ import "./index.css";
 import {
   ApolloClient,
   InMemoryCache,
+  ApolloProvider,
 } from "@apollo/client";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
