@@ -24,13 +24,17 @@ export default function AllPrograms() {
       <h2 className="py-14 pl-4 text-left text-3xl font-bold text-light">
         Browse
       </h2>
-      {/* TODO make gradients alternate */}
-      {/* TODO geht all the programs without hardcoding it here */}
-      <ProgramMedium>
+      {/* TODO make gradients alternate and get all the programs without hardcoding it here ... oder ist das zu kompliziert gedacht?*/}
+      
+      <ProgramMedium bg="grad1">
         <p>{data.programs[0].name}</p>
       </ProgramMedium>
-      <ProgramMedium />
-      <ProgramMedium />
+      <ProgramMedium bg="grad2">
+      <p>{data.programs[1].name}</p>
+      </ProgramMedium>
+      <ProgramMedium bg="grad3">
+      <p>{data.programs[2].name}</p>
+      </ProgramMedium>
     </DefaultLayout>
   );
 }
