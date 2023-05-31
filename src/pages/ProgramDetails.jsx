@@ -50,8 +50,13 @@ export default function ProgramDetails() {
           <li>Beweglichkeit</li></ul>
         </section>
         <section>
+          {/*  for each workout in data.programs[0].workout show  */}
           <Workout className="grad1" />
         </section>
+
+   
+     
+
 </DefaultLayout>
     );
 }
