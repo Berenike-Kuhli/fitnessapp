@@ -2,15 +2,14 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Home from "./pages/Home";
-import ErrorPage from "./pages/ErrorPage";
 import {
   ApolloClient,
   InMemoryCache,
-  ApolloProvider,
-  gql,
 } from "@apollo/client";
+import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage";
 import AllPrograms from "./pages/AllPrograms";
+import ProgramDetails from "./pages/ProgramDetails";
 import Sandbox from "./pages/Sandbox";
 
 const root = createRoot(document.getElementById("root"));
@@ -28,9 +27,15 @@ const router = createBrowserRouter([
   },
 
   {
+    path: "/programdetails",
+    element: <ProgramDetails />,
+  },
+
+  {
     path: "/sandbox",
     element: <Sandbox />
   },
+
 
   // Error als Catch all am Ende
   {
