@@ -22,27 +22,29 @@ export default function ProgramDetails() {
   if (error) return `Error! ${error}`;
   return (
     <DefaultLayout>
-      <section className="flex h-[540px] flex-col bg-gradient-to-br from-g1a to-g1b ">
+      <section className="flex h-[540px] bg-gradient-to-br from-g1a to-g1b ">
         {/* X close */}
-        <h1 className="self-center justify-self-center text-center text-4xl font-bold">
+
+        <h1 className="self-center bg-medium text-center text-4xl font-bold">
           {data.programs[0].name}
         </h1>
-        <section className="flex flex-row justify-around">
-          <article>
+
+        <section className="flex flex-row items-end">
+          <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
             <p>{data.programs[0].focus}</p>
           </article>
-          <article>
+          <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
             <p>{data.programs[0].difficulty}</p>
           </article>
-          <article>
+          <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
             <p>{data.programs[0].duration} Minuten</p>
           </article>
         </section>
       </section>
-      
+
       <section className="bg-medium p-3.5">
         {data.programs[0].description}
       </section>
