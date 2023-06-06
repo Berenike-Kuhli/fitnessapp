@@ -4,11 +4,13 @@ import { gql, useQuery } from "@apollo/client";
 
 const GET_WORKOUTS = gql`
   query GetWorkouts {
-    program {
+    programs {
+      workouts {
       name
       duration
       category
     }
+  }
   }`;
 
 export default function Workout({bg="grad1"}) {
@@ -26,9 +28,9 @@ export default function Workout({bg="grad1"}) {
     <div className="m-3.5 flex h-24 w-88 rounded-[20px] bg-medium">
       <div className={` h-24 w-24 rounded-l-[20px] bg-gradient-to-br ${bgStyles[bg]}`}></div>
       <div className="p-3.5">
-        <h1 className="mb-3.5 text-lg font-bold text-light">Tag 1</h1>
-        <p className="text-xs text-light">26 Min. &middot;</p>
-        <p className="text-xs text-light">Beweglichkeit</p>
+        <h1 className="mb-3.5 text-lg font-bold text-light">{data.programs[0].workouts[0].name}</h1>
+        <p className="text-xs text-light">{data.programs[0].workouts[0].duration} Min &middot;</p>
+        <p className="text-xs text-light">{data.programs[0].workouts[0].category}</p>
       </div>
     </div>
   );
