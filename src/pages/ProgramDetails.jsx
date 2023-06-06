@@ -11,6 +11,9 @@ const GET_DETAILS = gql`
       focus
       difficulty
       duration
+      workouts(first:3) {
+        name
+      }
     }
   }
 `;
@@ -22,14 +25,14 @@ export default function ProgramDetails() {
   if (error) return `Error! ${error}`;
   return (
     <DefaultLayout>
-      <section className="flex h-[540px] bg-gradient-to-br from-g1a to-g1b ">
+      <section className="flex flex-col h-[540px] bg-gradient-to-br from-g1a to-g1b ">
         {/* X close */}
-
-        <h1 className="self-center bg-medium text-center text-4xl font-bold">
+<article className="justify-center bg-medium">
+        <h1 className="text-center text-4xl font-bold">
           {data.programs[0].name}
         </h1>
-
-        <section className="flex flex-row items-end">
+        </article>
+        <section className="flex flex-row">
           <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
             <p>{data.programs[0].focus}</p>
@@ -53,7 +56,10 @@ export default function ProgramDetails() {
         <h3 className="m-3.5 text-lg font-bold">
           So ist das Programm aufgeteilt:
         </h3>
-        {/* Tortendiagramm kommt später */}
+  
+        <article className="flex mb-16">
+                {/* Tortendiagramm kommt später*/}
+                {/* TODO Abstände zwischen der Aufzählung optimieren (kleiner, enger) */}
         <Ellipse bg="medium" as="large" />
         <ul className="text-xs">
           <li className="flex flex-row items-center">
@@ -73,6 +79,7 @@ export default function ProgramDetails() {
             Beweglichkeit
           </li>
         </ul>
+        </article>
       </section>
 
       <section className="pb-28">
@@ -80,8 +87,11 @@ export default function ProgramDetails() {
           <h2 className="m-3.5 font-bold">{data.programs[0].duration} Tage</h2>
           <p className="m-3.5 text-xs">Alle anzeigen</p>
         </article>
-        {/*  for each workout in data.programs[0].workout show  */}
+        {/*  for each workout in data.programs[0].workout show 
+        wie die einzelnen Workouts eines Programmes ansprechen, programm ausgewählt anderswo */}
         <Workout className="grad1" />
+        <Workout/>
+        <Workout/>
       </section>
     </DefaultLayout>
   );
