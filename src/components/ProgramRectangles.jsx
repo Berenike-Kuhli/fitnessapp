@@ -1,21 +1,3 @@
-// import { ButtonPrimary } from "./buttons/ButtonPrimary";
-
-
-
-export function ProgramLarge() {
-    const bgStyles = {
-        grad1: "from-g1a to-g1b",
-        grad2: " from-g2a to-g2b",
-        grad3: "from-g3d from-[21.35%] via-g3c via-[74.35%] to-g3b to-[92.71%]",
-      };
-   return (
-<div>
-    <p>Vorschau</p>
-<ButtonPrimary><p>Programm auswählen</p></ButtonPrimary>
-</div>
- );   
-}
-
 
 export default function ProgramMedium({ children, className, bg = "grad1"}) {
     const bgStyles = {
