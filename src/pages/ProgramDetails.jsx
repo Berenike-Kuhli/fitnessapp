@@ -42,14 +42,15 @@ export default function ProgramDetails() {
           </article>
         </section>
       </section>
+      
       <section className="bg-medium p-3.5">
         {data.programs[0].description}
       </section>
+
       <section>
         <h3 className="m-3.5 text-lg font-bold">
           So ist das Programm aufgeteilt:
         </h3>
-
         {/* Tortendiagramm kommt später */}
         <Ellipse bg="medium" as="large" />
         <ul className="text-xs">
@@ -71,6 +72,7 @@ export default function ProgramDetails() {
           </li>
         </ul>
       </section>
+
       <section className="pb-28">
         <article className="flex flex-row items-center justify-between">
           <h2 className="m-3.5 font-bold">{data.programs[0].duration} Tage</h2>
