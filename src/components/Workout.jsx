@@ -1,15 +1,13 @@
 import { gql, useQuery } from "@apollo/client";
 
-<TODO>query anpassen, um Felder aus der DB zu ziehen </TODO>
+// query anpassen, um Felder aus der DB zu ziehen
 
 const GET_WORKOUTS = gql`
   query GetWorkouts {
-    programs {
+    program {
       name
-      description
-      focus
-      difficulty
       duration
+      category
     }
   }`;
 
