@@ -29,14 +29,12 @@ export default function ProgramDetails() {
   const { program } = data;
   return (
     <DefaultLayout>
-      <section className="flex h-[540px] flex-col bg-gradient-to-br from-g1a to-g1b ">
+      <section className="relative flex h-[30vh] flex-col items-center justify-center bg-gradient-to-br from-g1a to-g1b">
         {/* X close */}
-        <article className="justify-center bg-medium">
-          <h1 className="text-center text-4xl font-bold">{program.name}</h1>
-        </article>
+        <h1 className="text-center text-4xl font-bold">{program.name}</h1>
         {/* justify-around braucht Weiten-Angabe! 
         nochmal Hero Rustica angucken */}
-        <section className="flex h-full w-screen flex-row content-end justify-around">
+        <section className="absolute bottom-4 flex w-screen flex-row content-end justify-around">
           <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
             <p>{program.focus}</p>
