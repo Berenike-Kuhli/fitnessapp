@@ -26,10 +26,10 @@ const router = createBrowserRouter([
     path: "/programs",
     element: <AllPrograms />,
   },
-
+// ID reicht, weil nur eine ID im Programm
   {
-    path: "/programdetails",
-    element: <ProgramDetails />,
+    path: "/programdetails/",
+    element: <ProgramDetails/>,
   },
 
   {

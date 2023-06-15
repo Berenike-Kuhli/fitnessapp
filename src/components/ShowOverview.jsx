@@ -1,4 +1,4 @@
-function ShowOverview() {
+function ShowOverview({programId}) {
   return (
     <div id="overview">
       <div className="flex items-baseline justify-between pt-10">
@@ -9,7 +9,7 @@ function ShowOverview() {
           Trainingsplan
         </label>
       </div>
-      <div className="rounded-3xl m-5 h-56 flex-col bg-medium px-4 pb-8 pt-24 text-left">
+      <a href={`/programdetails/${programId}`} className="rounded-3xl m-5 h-56 flex-col bg-medium px-4 pb-8 pt-24 text-left">
         <h3 className="text-2xl font-bold text-light">Tag 2</h3>
         <h2 className="text-3xl font-bold text-light">Titel des Programms</h2>
         <div className="h-56">
@@ -19,7 +19,7 @@ function ShowOverview() {
             Beweglichkeit
           </label>
         </div>
-      </div>
+      </a>
     </div>
   );
 }

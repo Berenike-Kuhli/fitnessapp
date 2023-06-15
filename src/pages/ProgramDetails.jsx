@@ -2,10 +2,12 @@ import Workout from "../components/Workout";
 import DefaultLayout from "../layouts/DefaultLayout";
 import Ellipse from "../components/ellipsen";
 import { gql, useQuery } from "@apollo/client";
+import { useParams } from "react-router-dom";
+
 
 const GET_DETAILS = gql`
-  query GetDetails {
-    programs {
+  query GetDetails($id: ID!) {
+    program(where: {id: $id}) {
       name
       description
       focus
@@ -18,38 +20,42 @@ const GET_DETAILS = gql`
   }
 `;
 
-export default function ProgramDetails() {
-  const { loading, error, data } = useQuery(GET_DETAILS);
+export default function ProgramDetails(user) {
+  const { id } = useParams();
+  const { loading, error, data } = useQuery(GET_DETAILS, {variables: {id}});
 
   if (loading) return null;
   if (error) return `Error! ${error}`;
+  const {program} = data;
   return (
     <DefaultLayout>
       <section className="flex flex-col h-[540px] bg-gradient-to-br from-g1a to-g1b ">
         {/* X close */}
 <article className="justify-center bg-medium">
         <h1 className="text-center text-4xl font-bold">
-          {data.programs[0].name}
+          {program.name}
         </h1>
         </article>
-        <section className="flex flex-row">
+        {/* justify-around braucht Weiten-Angabe! 
+        nochmal Hero Rustica angucken*/}
+        <section className="w-screen flex content-end flex-row justify-around h-full">
           <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
-            <p>{data.programs[0].focus}</p>
+            <p>{program.focus}</p>
           </article>
           <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
-            <p>{data.programs[0].difficulty}</p>
+            <p>{program.difficulty}</p>
           </article>
           <article className="flex flex-col items-center">
             <Ellipse bg="medium" as="medium" />
-            <p>{data.programs[0].duration} Minuten</p>
+            <p>{program.duration} Minuten</p>
           </article>
         </section>
       </section>
 
       <section className="bg-medium p-3.5">
-        {data.programs[0].description}
+        {program.description}
       </section>
 
       <section>
@@ -84,7 +90,7 @@ export default function ProgramDetails() {
 
       <section className="pb-28">
         <article className="flex flex-row items-center justify-between">
-          <h2 className="m-3.5 font-bold">{data.programs[0].duration} Tage</h2>
+          <h2 className="m-3.5 font-bold">{program.duration} Tage</h2>
           <p className="m-3.5 text-xs">Alle anzeigen</p>
         </article>
         {/*  for each workout in data.programs[0].workout show 
@@ -94,5 +100,6 @@ export default function ProgramDetails() {
         <Workout/>
       </section>
     </DefaultLayout>
+
   );
 }

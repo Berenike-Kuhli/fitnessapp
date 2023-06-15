@@ -6,7 +6,8 @@ import NavBar from "../../components/navbar/index";
 
 const user = {
   name: "Maxine Musterfrau",
-  hasChosen: false,
+  hasChosen: true,
+  id: "clibzs08t8gle0bw9s7pj2men",
 };
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
         <img src={Startbild}></img>
       </div>
       {/* Bedingung true? dann ShowOverview, else ChooseProgram */}
-      {user.hasChosen ? <ShowOverview /> : <ChooseProgram />}
+      {user.hasChosen ? <ShowOverview programId={user.id} /> : <ChooseProgram />}
       <NavBar />
     </DefaultLayout>
   );
