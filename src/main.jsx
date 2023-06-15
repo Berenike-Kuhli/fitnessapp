@@ -2,11 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-} from "@apollo/client";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import AllPrograms from "./pages/AllPrograms";
@@ -26,21 +22,20 @@ const router = createBrowserRouter([
     path: "/programs",
     element: <AllPrograms />,
   },
-// ID reicht, weil nur eine ID im Programm
+  // ID reicht, weil nur eine ID im Programm
   {
-    path: "/programdetails/",
-    element: <ProgramDetails/>,
+    path: "/program-details/:id",
+    element: <ProgramDetails />,
   },
 
   {
     path: "/sandbox",
-    element: <Sandbox />
+    element: <Sandbox />,
   },
-
 
   // Error als Catch all am Ende
   {
-    path: "/",
+    path: "*",
     errorElement: <ErrorPage />,
   },
 ]);
