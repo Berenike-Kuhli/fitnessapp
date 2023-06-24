@@ -87,7 +87,7 @@ export default function ProgramDetails() {
           <h2 className="m-3.5 font-bold">{program.duration} Tage</h2>
           <p className="m-3.5 text-xs">Alle anzeigen</p>
         </article>
-        {/*  for each workout in data.programs[0].workout show 
+        {/*  for each workout in programs.workout show 
         wie die einzelnen Workouts eines Programmes ansprechen, programm ausgewählt anderswo */}
         <Workout className="grad1" />
         <Workout />

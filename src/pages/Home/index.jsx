@@ -32,6 +32,8 @@ const GET_PROGRAM = gql`
   }
 `;
 
+//content type user, profile in hygraph; holen, Daten abfragen
+
 function Home() {
   const {
     loading: userLoading,

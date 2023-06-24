@@ -4,7 +4,7 @@ import { gql, useQuery } from "@apollo/client";
 
 const GET_WORKOUTS = gql`
   query GetWorkouts {
-    programs {
+    program {
       workouts {
       name
       duration
