@@ -15,6 +15,8 @@ const GET_DETAILS = gql`
       duration
       workouts(first: 3) {
         name
+        duration
+        category
       }
     }
   }
@@ -87,11 +89,10 @@ export default function ProgramDetails() {
           <h2 className="m-3.5 font-bold">{program.duration} Tage</h2>
           <p className="m-3.5 text-xs">Alle anzeigen</p>
         </article>
-        {/*  for each workout in programs.workout show 
-        wie die einzelnen Workouts eines Programmes ansprechen, programm ausgewählt anderswo */}
-        <Workout className="grad1" />
-        <Workout />
-        <Workout />
+        {program.workouts.map((workout, i) => (
+          // hier Farbwechsel reinbauen
+          <Workout workout={workout} key={`workout-${i}`} />
+        ))}
       </section>
     </DefaultLayout>
   );
