@@ -91,7 +91,7 @@ export default function ProgramDetails() {
         </article>
         {program.workouts.map((workout, i) => (
           // hier Farbwechsel reinbauen
-          <Workout workout={workout} key={`workout-${i}`} />
+          <Workout workout={workout} key={workout.id} />
         ))}
       </section>
     </DefaultLayout>
